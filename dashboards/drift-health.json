@@ -1,0 +1,42 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "NSO Rocket - Drift Health",
+    "tags": ["NSO", "Config Drift", "Compliance"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Drift Percentage Over Time",
+        "targets": [
+          {
+            "refId": "A",
+            "target": "drift.percent"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Top Devices by Drift Severity",
+        "targets": [
+          {
+            "refId": "B",
+            "target": "drift.devices.severity"
+          }
+        ]
+      },
+      {
+        "type": "stat",
+        "title": "Remediation Success Rate",
+        "targets": [
+          {
+            "refId": "C",
+            "target": "drift.remediation.successRate"
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 27,
+    "version": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "nsoApi": {
+      "baseUrl": "https://nso.example.com/api",
+      "timeoutSeconds": 30,
+      "maxRetries": 3
+    },
+    "asyncProcessing": {
+      "enabled": true,
+      "batchSize": 10,
+      "concurrentRequests": 5,
+      "retryDelaySeconds": 5
+    },
+    "logging": {
+      "level": "info",
+      "logFilePath": "/data/drift-logs/async-activity.log"
+    }
+  }
