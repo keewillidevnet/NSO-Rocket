@@ -1,0 +1,150 @@
+{
+    "name": "NSO Config Drift Detection",
+    "nodes": [
+      {
+        "parameters": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 */4 * * *"
+            }
+          ]
+        },
+        "name": "Schedule Drift Check",
+        "type": "n8n-nodes-base.cron",
+        "typeVersion": 1,
+        "position": [250, 300]
+      },
+      {
+        "parameters": {
+          "url": "https://nso.example.com/api/configs/intended",
+          "options": {
+            "batchInterval": 1000,
+            "parallelProcessing": true
+          }
+        },
+        "name": "Fetch NSO Intended Config",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 1,
+        "position": [500, 200]
+      },
+      {
+        "parameters": {
+          "url": "https://nso.example.com/api/devices/live-config",
+          "options": {
+            "batchInterval": 1000,
+            "parallelProcessing": true
+          }
+        },
+        "name": "Fetch Live Device Config",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 1,
+        "position": [500, 400]
+      },
+      {
+        "parameters": {
+          "functionCode": "const topologyWeights = {\n  core: 3,\n  distribution: 2,\n  access: 1\n};\n\nconst driftResults = [];\n\nfor (let i = 0; i < items.length; i++) {\n  const intended = items[i].json.intendedConfig;\n  const live = items[i].json.liveConfig;\n\n  // Normalize configs for fair comparison\n  const normalize = cfg => cfg.replace(/\\s+/g, ' ').trim();\n\n  const drift = normalize(intended) !== normalize(live);\n\n  // Weight severity by topology role\n  const deviceRole = items[i].json.role || 'access';\n  const severity = drift ? topologyWeights[deviceRole] : 0;\n\n  driftResults.push({\n    device: items[i].json.device,\n    drift,\n    severity\n  });\n}\n\nreturn driftResults.map(r => ({ json: r }));"
+        },
+        "name": "Compare Configs & Weight Severity",
+        "type": "n8n-nodes-base.function",
+        "typeVersion": 1,
+        "position": [800, 300]
+      },
+      {
+        "parameters": {
+          "channel": "#nso-alerts",
+          "text": "Config Drift Detected: {{$json.device}} (Severity: {{$json.severity}})"
+        },
+        "name": "Send Slack Alert",
+        "type": "n8n-nodes-base.slack",
+        "typeVersion": 1,
+        "position": [1100, 200]
+      },
+      {
+        "parameters": {
+          "functionCode": "return [{ json: { timestamp: new Date().toISOString(), device: $json.device, severity: $json.severity }}];"
+        },
+        "name": "Prepare Dashboard Log",
+        "type": "n8n-nodes-base.function",
+        "typeVersion": 1,
+        "position": [1100, 400]
+      },
+      {
+        "parameters": {
+          "fileName": "/data/drift-logs/drift-log-{{$json.timestamp}}.json",
+          "fileContent": "Device: {{$json.device}} | Severity: {{$json.severity}}"
+        },
+        "name": "Write Drift Log File",
+        "type": "n8n-nodes-base.writeBinaryFile",
+        "typeVersion": 1,
+        "position": [1400, 300]
+      }
+    ],
+    "connections": {
+      "Schedule Drift Check": {
+        "main": [
+          [
+            {
+              "node": "Fetch NSO Intended Config",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Fetch Live Device Config",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Fetch NSO Intended Config": {
+        "main": [
+          [
+            {
+              "node": "Compare Configs & Weight Severity",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Fetch Live Device Config": {
+        "main": [
+          [
+            {
+              "node": "Compare Configs & Weight Severity",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Compare Configs & Weight Severity": {
+        "main": [
+          [
+            {
+              "node": "Send Slack Alert",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Prepare Dashboard Log",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Prepare Dashboard Log": {
+        "main": [
+          [
+            {
+              "node": "Write Drift Log File",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    }
+  }
