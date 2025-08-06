@@ -6,6 +6,11 @@
 ![NSO](https://img.shields.io/badge/Cisco-NSO-lightgrey)
 ![Version](https://img.shields.io/badge/version-1.0.0-blueviolet)
 
+**Key Files**
+- 📘 [Setup Guide](documentation/setup-guide.md)
+- ⚡ [Flagship Drift Workflow](workflows/compliance/config-drift-detection.json)
+- 🤖 [AGNTCY Drift Agent Manifest](agntcy/manifests/drift-detection-workflow.yaml)
+
 > **Launch NSO to new heights with AGNTCY multi‑agents & n8n automation**  
 > _Transform NSO operations with intelligent multi‑agent automation. Combines AGNTCY's agent framework with n8n workflows to eliminate config drift, accelerate deployments & reduce complexity._
 
