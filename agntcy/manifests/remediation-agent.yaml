@@ -1,0 +1,21 @@
+agent:
+  name: remediation-agent
+  version: 1.0.0
+  description: >
+    Executes remediation workflows based on drift detection outputs.
+  entrypoint: workflows/operations/remediation.json
+  type: workflow
+  inputs:
+    - name: drift-results
+      source: drift-detection-workflow
+  outputs:
+    - name: remediation-log
+      path: dashboards/remediation-health.json
+  dependencies:
+    - n8n >= 1.0
+    - Cisco NSO >= 5.7
+  tags:
+    - remediation
+    - compliance
+    - nso
+    - agntcy

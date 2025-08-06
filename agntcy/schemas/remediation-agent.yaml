@@ -1,0 +1,28 @@
+schemaVersion: 1.0
+name: remediation-agent
+description: >
+  Defines the input/output schema for NSO-Rocket remediation agent.
+inputs:
+  driftResults:
+    type: array
+    items:
+      type: object
+      properties:
+        device:
+          type: string
+        severity:
+          type: number
+        recommendedAction:
+          type: string
+outputs:
+  remediationStatus:
+    type: array
+    items:
+      type: object
+      properties:
+        device:
+          type: string
+        actionTaken:
+          type: string
+        status:
+          type: string

@@ -1,0 +1,43 @@
+schemaVersion: 1.0
+name: drift-detection
+description: >
+  Defines the input/output schema for the NSO-Rocket drift detection agent.
+inputs:
+  asyncSettings:
+    type: object
+    description: Async processing parameters
+    properties:
+      batchSize:
+        type: integer
+        description: Number of devices per batch
+      concurrentRequests:
+        type: integer
+        description: Number of parallel API calls
+      timeoutSeconds:
+        type: integer
+        description: API timeout
+  topologyWeights:
+    type: object
+    description: Drift severity weights per topology role
+    properties:
+      core:
+        type: number
+      distribution:
+        type: number
+      access:
+        type: number
+      lab:
+        type: number
+outputs:
+  driftResults:
+    type: array
+    description: List of drift results
+    items:
+      type: object
+      properties:
+        device:
+          type: string
+        severity:
+          type: number
+        driftDetected:
+          type: boolean

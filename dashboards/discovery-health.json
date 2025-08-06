@@ -1,0 +1,22 @@
+{
+    "dashboard": {
+      "id": null,
+      "title": "NSO Rocket - Discovery Health",
+      "tags": ["NSO", "Discovery"],
+      "timezone": "browser",
+      "panels": [
+        {
+          "type": "table",
+          "title": "Discovered Devices",
+          "targets": [
+            {
+              "refId": "A",
+              "target": "discovery.devices"
+            }
+          ]
+        }
+      ],
+      "schemaVersion": 27,
+      "version": 1
+    }
+  }

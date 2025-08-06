@@ -1,0 +1,18 @@
+agent:
+  name: discovery-agent
+  version: 1.0.0
+  description: >
+    Scans NSO inventory and live network to find unregistered devices/services.
+    Outputs a discovery report for compliance and onboarding.
+  entrypoint: workflows/discovery/network-discovery.json
+  type: workflow
+  outputs:
+    - name: discovery-report
+      path: dashboards/discovery-health.json
+  dependencies:
+    - n8n >= 1.0
+    - Cisco NSO >= 5.7
+  tags:
+    - discovery
+    - nso
+    - agntcy

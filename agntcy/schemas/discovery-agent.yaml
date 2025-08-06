@@ -1,0 +1,16 @@
+schemaVersion: 1.0
+name: discovery-agent
+description: >
+  Defines the input/output schema for NSO-Rocket discovery agent.
+outputs:
+  discoveredDevices:
+    type: array
+    items:
+      type: object
+      properties:
+        device:
+          type: string
+        status:
+          type: string
+        lastSeen:
+          type: string
