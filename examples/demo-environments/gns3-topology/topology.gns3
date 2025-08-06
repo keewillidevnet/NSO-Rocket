@@ -1,0 +1,11 @@
+{
+  "topology": {
+    "routers": [
+      { "name": "R1", "platform": "IOS-XR" },
+      { "name": "R2", "platform": "IOS-XE" }
+    ],
+    "switches": [
+      { "name": "SW1", "platform": "IOS" }
+    ]
+  }
+}

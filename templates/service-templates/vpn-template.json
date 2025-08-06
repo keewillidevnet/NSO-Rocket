@@ -1,0 +1,11 @@
+{
+    "service": {
+      "name": "vpn-service",
+      "description": "Sample VPN template for NSO-Rocket demo environment",
+      "parameters": {
+        "remoteSite": "BranchOffice1",
+        "encryption": "AES256",
+        "tunnelIp": "192.168.100.1"
+      }
+    }
+  }

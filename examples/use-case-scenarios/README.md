@@ -1,12 +1,25 @@
-# Use Case Scenarios
+# 🛠️ Use Case Scenarios
 
-Real-world implementation scenarios and examples for different network environments.
+Real-world implementation examples for different network environments.
 
-## Files in this folder:
-- `enterprise-campus/` - Enterprise campus network automation scenarios
-- `service-provider/` - Service provider network automation examples
-- `data-center/` - Data center fabric automation use cases
-- `hybrid-cloud/` - Hybrid cloud network integration scenarios
+---
 
-## Purpose
-Practical examples that demonstrate how to apply NSO-Rocket workflows in different network environments and use cases.
+## 📂 Current Status (v1)
+The following scenarios will be introduced in future releases:
+- **Enterprise Campus** – Large enterprise automation with compliance enforcement
+- **Service Provider** – Multi-tenant network provisioning and monitoring
+- **Data Center** – Fabric automation with topology-aware routing
+- **Hybrid Cloud** – Integration between on-premises and cloud-based services
+
+---
+
+## 📌 Purpose
+This folder is a placeholder for upcoming **scenario-based guides and configurations**.  
+These will demonstrate how to apply NSO-Rocket workflows in:
+- Different verticals (Enterprise, SP, DC, Cloud)
+- Mixed vendor environments
+- Gradual adoption rollouts
+
+---
+
+> **Tip:** If you want to propose a scenario, open a [GitHub Issue](../../issues) with the `use-case-request` label.

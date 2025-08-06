@@ -1,0 +1,11 @@
+{
+    "service": {
+      "name": "qos-policy",
+      "description": "Sample QoS policy for prioritizing voice traffic in demo environment",
+      "parameters": {
+        "policyName": "VoicePriority",
+        "priorityClass": "EF",
+        "bandwidthPercent": 30
+      }
+    }
+  }

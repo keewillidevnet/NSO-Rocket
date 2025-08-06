@@ -1,11 +1,24 @@
-# AGNTCY Schemas
+# 📜 AGNTCY Schemas
 
-Open Agent Schema Framework (OASF) definitions for NSO automation agents.
+Open Agent Schema Framework (OASF) definitions for NSO‑Rocket multi‑agent automation.
 
-## Files in this folder:
-- `nso-drift-detector.yaml` - OASF schema for configuration drift detection agent
-- `nso-service-deployer.yaml` - OASF schema for service deployment agent
-- `nso-compliance-checker.yaml` - OASF schema for compliance validation agent
+---
 
 ## Purpose
-Standardized agent definitions that enable discovery and interoperability in the AGNTCY ecosystem.
+This folder contains standardized **agent schema definitions** that allow NSO‑Rocket workflows to:
+- Advertise capabilities to the AGNTCY framework
+- Interoperate with other agents in multi‑workflow scenarios
+- Maintain consistent input/output formats
+
+---
+
+## Current Schemas (v1)
+- `drift-detection.yaml` – OASF schema for Configuration Drift Detection Agent
+- `remediation-agent.yaml` – OASF schema for Remediation Agent
+- `discovery-agent.yaml` – OASF schema for Discovery Agent
+
+---
+
+## Planned Schemas (Future Phases)
+- `service-deployer.yaml`   – Deploy services automatically from catalog
+- `compliance-checker.yaml` – Validate device configs against baseline policies
