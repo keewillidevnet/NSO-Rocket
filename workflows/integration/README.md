@@ -1,11 +1,23 @@
-# Integration Workflows
+# 🔗 Integration Workflows
 
 Workflows for integrating NSO with external systems and legacy infrastructure.
 
-## Workflows in this folder:
-- `legacy-system-bridge.json` - Bridges NSO with legacy network management systems
-- `multi-vendor-adapters.json` - Adapts NSO workflows for different vendor equipment
-- `api-translation.json` - Translates between different API formats and protocols
+---
 
-## Purpose
-Enable seamless integration between NSO and existing network infrastructure, tools, and processes.
+## 📂 Current Workflows (v1)
+This folder is currently a placeholder for integration workflows planned in future phases.
+
+---
+
+## 📌 Purpose
+Integration workflows will:
+- Enable seamless integration between NSO and legacy systems
+- Provide vendor-specific adapters
+- Translate between API formats and protocols
+
+---
+
+## 📅 Planned Workflows
+- `legacy-system-bridge.json` — Bridge NSO with legacy network management systems
+- `multi-vendor-adapters.json` — Adapt NSO workflows for different vendor equipment
+- `api-translation.json` — Translate between API formats and protocols
