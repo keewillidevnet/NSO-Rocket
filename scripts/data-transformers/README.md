@@ -1,12 +1,24 @@
-# Data Transformation Scripts
+# 🔄 Data Transformation Scripts
 
-Scripts for transforming data between different formats and systems.
+Scripts for transforming data between different formats and systems for NSO-Rocket workflows.
 
-## Files in this folder:
-- `yang-to-json.py` - Convert YANG models to JSON schemas
-- `csv-to-nso.py` - Import device inventories from CSV to NSO
-- `legacy-config-parser.py` - Parse legacy configurations for NSO migration
-- `report-generators.py` - Generate reports from NSO and workflow data
+---
 
-## Purpose
-Data transformation utilities that bridge gaps between different network management systems and formats.
+## 📂 Current Status (v1)
+This folder is a placeholder for future transformation utilities such as:
+- **YANG → JSON** — Convert YANG models to JSON schemas
+- **CSV → NSO** — Import device inventories from CSV to NSO
+- **Legacy Config Parser** — Parse legacy configurations for NSO migration
+- **Report Generators** — Create formatted reports from NSO and workflow data
+
+---
+
+## 📌 Purpose
+These scripts will:
+- Bridge format gaps between NSO, AGNTCY, and other systems  
+- Simplify migration of legacy device configs  
+- Support reporting and compliance tracking
+
+---
+
+> This folder is currently a **stub** for Phase 2 development. Contributions welcome!
