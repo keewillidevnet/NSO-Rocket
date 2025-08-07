@@ -1,5 +1,5 @@
-# 🚀 NSO‑Rocket  
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+# 🚀 NSO‑Rocket
+![CI](https://github.com/keewillidevnet/NSO-Rocket/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![AGNTCY](https://img.shields.io/badge/AGNTCY-compatible-orange)
 ![n8n](https://img.shields.io/badge/n8n-workflows-success)
@@ -11,7 +11,7 @@
 - ⚡ [Flagship Drift Workflow](workflows/compliance/config-drift-detection.json)
 - 🤖 [AGNTCY Drift Agent Manifest](agntcy/manifests/drift-detection-workflow.yaml)
 
-> **Launch NSO to new heights with AGNTCY multi‑agents & n8n automation**  
+> **Launch NSO to new heights with AGNTCY multi‑agents & n8n automation**
 > _Transform NSO operations with intelligent multi‑agent automation. Combines AGNTCY's agent framework with n8n workflows to eliminate config drift, accelerate deployments & reduce complexity._
 
 ---
@@ -54,12 +54,12 @@ NSO-Rocket/
 
 ## Key Features
 
-✅ **Async Drift Detection** — Parallel API calls for lightning‑fast checks  
-✅ **Topology‑Aware Prioritization** — Core devices prioritized automatically  
-✅ **Multi‑Agent Orchestration** — AGNTCY semantic routing & workflow chaining  
-✅ **Dashboards** — Real‑time drift trends, compliance health, remediation history  
-✅ **Multi‑Vendor Ready** — Templates & workflows for Cisco, Juniper, Arista, more  
-✅ **Brownfield Discovery** — Migrate existing services into NSO with minimal friction  
+✅ **Async Drift Detection** — Parallel API calls for lightning‑fast checks
+✅ **Topology‑Aware Prioritization** — Core devices prioritized automatically
+✅ **Multi‑Agent Orchestration** — AGNTCY semantic routing & workflow chaining
+✅ **Dashboards** — Real‑time drift trends, compliance health, remediation history
+✅ **Multi‑Vendor Ready** — Templates & workflows for Cisco, Juniper, Arista, more
+✅ **Brownfield Discovery** — Migrate existing services into NSO with minimal friction
 
 ---
 
@@ -85,25 +85,25 @@ code .
 - In n8n, import workflows from `workflows/` (start with `compliance/config-drift-detection.json`)
 
 ### 5. Run Drift Detection
-- Trigger drift detection workflow in n8n  
+- Trigger drift detection workflow in n8n
 - View results in Slack (alerts) or Grafana (dashboards in `dashboards/`)
 
 ---
 
 ## Integrations
 
-- **Cisco NSO** — API integration for device configs & service state  
-- **n8n** — Workflow engine for orchestration & automation  
-- **AGNTCY** — Multi‑agent interoperability & semantic routing  
-- **Grafana** — Optional visualization for drift, compliance, and health trends  
+- **Cisco NSO** — API integration for device configs & service state
+- **n8n** — Workflow engine for orchestration & automation
+- **AGNTCY** — Multi‑agent interoperability & semantic routing
+- **Grafana** — Optional visualization for drift, compliance, and health trends
 
 ---
 
 ## Roadmap
 
-**v1.0** — Async drift detection, topology prioritization, dashboards, AGNTCY schemas  
-**v1.5** — Remediation workflows, approval gates, ITSM integration (ServiceNow/Jira)  
-**v2.0** — Full AGNTCY workflow orchestration, remediation agents, brownfield migration automation  
+**v1.0** — Async drift detection, topology prioritization, dashboards, AGNTCY schemas
+**v1.5** — Remediation workflows, approval gates, ITSM integration (ServiceNow/Jira)
+**v2.0** — Full AGNTCY workflow orchestration, remediation agents, brownfield migration automation
 
 ---
 
