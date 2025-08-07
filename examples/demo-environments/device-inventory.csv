@@ -1,0 +1,6 @@
+hostname,ip,role,os,version
+CoreRouter1,10.0.0.1,core,IOS-XR,7.5.1
+DistSwitch1,10.0.1.1,distribution,IOS-XE,17.3.4
+DistSwitch2,10.0.1.2,distribution,IOS-XE,17.3.4
+AccessSwitch1,10.0.2.1,access,IOS,15.2
+AccessSwitch2,10.0.2.2,access,IOS,15.2

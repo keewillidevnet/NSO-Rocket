@@ -1,0 +1,15 @@
+{
+    "topology": {
+      "core": [
+        { "name": "CoreRouter1", "ip": "10.0.0.1" }
+      ],
+      "distribution": [
+        { "name": "DistSwitch1", "ip": "10.0.1.1" },
+        { "name": "DistSwitch2", "ip": "10.0.1.2" }
+      ],
+      "access": [
+        { "name": "AccessSwitch1", "ip": "10.0.2.1" },
+        { "name": "AccessSwitch2", "ip": "10.0.2.2" }
+      ]
+    }
+  }
