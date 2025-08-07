@@ -1,14 +1,17 @@
 ---
-name: Lint Check
+name: lint
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "main"
   pull_request:
-    branches: [main]
+    branches:
+      - "main"
 
 jobs:
-  lint: lint / lint
+  lint:
+    name: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -17,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install linters
         run: |
