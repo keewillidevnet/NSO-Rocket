@@ -1,0 +1,35 @@
+name: Lint Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install linters
+        run: |
+          pip install yamllint jsonlint pylint
+
+      - name: Lint YAML files
+        run: |
+          yamllint .
+
+      - name: Lint JSON files
+        run: |
+          find . -name "*.json" -exec jsonlint -q {} \;
+
+      - name: Lint Python files
+        run: |
+          find . -name "*.py" -exec pylint --disable=all --enable=errors,warnings {} +
