@@ -27,4 +27,3 @@ outputs:
           type: string
         status:
           type: string
-          

@@ -15,4 +15,3 @@ outputs:
           type: string
         lastSeen:
           type: string
-          
