@@ -6,4 +6,3 @@ services:
   - name: qos-policy
     description: Sample QoS policy for prioritizing voice traffic
     template: templates/service-templates/qos-policy.json
-    

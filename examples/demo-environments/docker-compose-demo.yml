@@ -17,4 +17,3 @@ services:
     environment:
       - GENERIC_TIMEZONE=UTC
     restart: unless-stopped
-    
