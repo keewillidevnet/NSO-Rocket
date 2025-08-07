@@ -1,3 +1,4 @@
+---
 services:
   - name: vpn-service
     description: Sample VPN configuration for demo environment
@@ -5,3 +6,4 @@ services:
   - name: qos-policy
     description: Sample QoS policy for prioritizing voice traffic
     template: templates/service-templates/qos-policy.json
+    

@@ -1,9 +1,11 @@
+---
 agent:
   name: drift-detection-workflow
   version: 1.0.0
   description: >
-    Async topology-aware drift detection for Cisco NSO environments. Executes config comparison,
-    applies severity weighting, and triggers alerts/dashboards.
+    Async topology-aware drift detection for Cisco NSO environments.
+    Executes config comparison, applies severity weighting, and
+    triggers alerts/dashboards..
   entrypoint: workflows/compliance/config-drift-detection.json
   type: workflow
   inputs:
