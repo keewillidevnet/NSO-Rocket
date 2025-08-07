@@ -1,0 +1,9 @@
+- name: ConfigBackup
+  type: remediation
+  description: Backup running configs for all devices
+  target_role: all
+
+- name: DriftDetection
+  type: audit
+  description: Check device config against source of truth
+  target_role: access

@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  nso:
+    image: cisco-nso/nso:latest
+    container_name: nso
+    ports:
+      - "8080:8080"
+      - "2022:2022"
+    volumes:
+      - nso_data:/var/opt/ncs
+
+  rocket-agent:
+    build:
+      context: ../../..
+      dockerfile: Dockerfile
+    container_name: rocket-agent
+    depends_on:
+      - nso
+    environment:
+      - NSO_HOST=nso
+    volumes:
+      - ./config:/app/config
+    command: ["python", "main.py"]
+
+volumes:
+  nso_data:

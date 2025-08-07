@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nso-rocket:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nso-rocket-dev
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python main.py
+    environment:
+      - PYTHONUNBUFFERED=1
