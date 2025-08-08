@@ -1,3 +1,4 @@
+---
 - name: ConfigBackup
   type: remediation
   description: Backup running configs for all devices
