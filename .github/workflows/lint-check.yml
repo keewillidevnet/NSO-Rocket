@@ -38,4 +38,4 @@ jobs:
         run: |
           find . -name "*.py" \
             -exec pylint --disable=all \
-            --enable=errors,warnings {}
+            --enable=errors,warnings {} \;
