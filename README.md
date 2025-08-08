@@ -54,12 +54,12 @@ NSO-Rocket/
 
 ## Key Features
 
-✅ **Async Drift Detection** — Parallel API calls for lightning‑fast checks
-✅ **Topology‑Aware Prioritization** — Core devices prioritized automatically
-✅ **Multi‑Agent Orchestration** — AGNTCY semantic routing & workflow chaining
-✅ **Dashboards** — Real‑time drift trends, compliance health, remediation history
-✅ **Multi‑Vendor Ready** — Templates & workflows for Cisco, Juniper, Arista, more
-✅ **Brownfield Discovery** — Migrate existing services into NSO with minimal friction
+- ✅ **Async Drift Detection** — Parallel API calls for lightning-fast checks
+- ✅ **Topology-Aware Prioritization** — Core devices prioritized automatically
+- ✅ **Multi-Agent Orchestration** — AGNTCY semantic routing & workflow chaining
+- ✅ **Dashboards** — Real-time drift trends, compliance health, remediation history
+- ✅ **Multi-Vendor Ready** — Templates & workflows for Cisco, Juniper, Arista, more
+- ✅ **Brownfield Discovery** — Migrate existing services into NSO with minimal friction
 
 ---
 
