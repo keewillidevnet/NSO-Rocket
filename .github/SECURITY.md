@@ -1,11 +1,12 @@
 # Security Policy
 
 ## Supported Versions
-
-We support the latest version of NSO-Rocket. Please ensure you're running the most up-to-date code before reporting any issues.
+We release security updates only for the latest main branch.
 
 ## Reporting a Vulnerability
+If you discover a security vulnerability, please report it responsibly:
 
-If you discover a security vulnerability, please open a GitHub Issue **with the "security" label**, or email: security@nso-rocket.dev
+- Email: security@example.com
+- Or open a security advisory via [GitHub Security Advisories](https://docs.github.com/en/code-security/security-advisories)
 
-We will coordinate a fix as quickly as possible.
+We will acknowledge your report within 48 hours and aim to release a fix within 14 days.
