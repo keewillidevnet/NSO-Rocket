@@ -3,11 +3,12 @@ name: "CodeQL"
 
 "on":
   push:
-    branches: [main]
   pull_request:
-    branches: [main]
   schedule:
-    - cron: '0 3 * * 0'
+    - cron: "0 3 * * 0"
+
+permissions:
+  contents: read
 
 jobs:
   analyze:
@@ -21,9 +22,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['python']
+        language: ["python"]
 
     steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2.10.1
+        with:
+          egress-policy: audit
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
