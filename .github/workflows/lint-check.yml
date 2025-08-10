@@ -1,21 +1,25 @@
 ---
-name: lint
+name: Lint Check
 
 "on":
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
-      - '**'
-  workflow_dispatch:
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   lint:
     name: lint / lint
     runs-on: ubuntu-latest
     steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -29,8 +33,7 @@ jobs:
           pip install yamllint jsonlint pylint
 
       - name: Lint YAML files
-        run: |
-          yamllint .
+        run: yamllint .
 
       - name: Lint JSON files
         run: |
@@ -39,5 +42,4 @@ jobs:
       - name: Lint Python files
         run: |
           find . -name "*.py" \
-            -exec pylint --disable=all \
-            --enable=errors,warnings {} \;
+            -exec pylint --disable=all --enable=errors,warnings {} \;
