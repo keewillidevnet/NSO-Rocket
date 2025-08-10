@@ -114,3 +114,4 @@ MIT License — see [LICENSE](LICENSE)
 
 ## Contributing
 Pull requests welcome! Check `documentation/setup-guide.md` for contribution guidelines.
+<!-- register Basic Test / placeholder-tests (pull_request) -->
