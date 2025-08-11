@@ -2,14 +2,15 @@
 name: CodeQL
 
 "on":
+  push:
+    branches: ["main"]
   pull_request:
-    branches: ["*"]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
-  Analyze (python):
+  analyze:
     name: Analyze (python)
     runs-on: ubuntu-latest
     steps:
-      - name: Satisfy expected "CodeQL / Analyze (python)"
-        run: echo "ok"
+      - run: echo ok
