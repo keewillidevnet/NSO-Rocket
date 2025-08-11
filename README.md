@@ -101,9 +101,11 @@ code .
 
 ## Roadmap
 
-**v1.0** — Async drift detection, topology prioritization, dashboards, AGNTCY schemas
-**v1.5** — Remediation workflows, approval gates, ITSM integration (ServiceNow/Jira)
-**v2.0** — Full AGNTCY workflow orchestration, remediation agents, brownfield migration automation
+| Version | Highlights |
+|---------|------------|
+| **v1.0** | 🔍 **Async drift detection**<br>📊 Topology prioritization<br>📈 Dashboards<br>📂 AGNTCY schemas |
+| **v1.5** | 🛠 **Remediation workflows**<br>✅ Approval gates<br>🔗 ITSM integration *(ServiceNow / Jira)* |
+| **v2.0** | 🤖 **Full AGNTCY workflow orchestration**<br>🛡 Remediation agents<br>🚚 Brownfield migration automation |
 
 ---
 
