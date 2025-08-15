@@ -1,0 +1,37 @@
+[
+  {
+    "hostname": "CoreRouter1",
+    "ip": "10.0.0.1",
+    "role": "core",
+    "os": "IOS-XR",
+    "version": "7.5.1"
+  },
+  {
+    "hostname": "DistSwitch1",
+    "ip": "10.0.1.1",
+    "role": "distribution",
+    "os": "IOS-XE",
+    "version": "17.3.4"
+  },
+  {
+    "hostname": "DistSwitch2",
+    "ip": "10.0.1.2",
+    "role": "distribution",
+    "os": "IOS-XE",
+    "version": "17.3.4"
+  },
+  {
+    "hostname": "AccessSwitch1",
+    "ip": "10.0.2.1",
+    "role": "access",
+    "os": "IOS",
+    "version": "15.2"
+  },
+  {
+    "hostname": "AccessSwitch2",
+    "ip": "10.0.2.2",
+    "role": "access",
+    "os": "IOS",
+    "version": "15.2"
+  }
+]
