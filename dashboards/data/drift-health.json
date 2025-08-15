@@ -1,0 +1,41 @@
+{
+  "run_id": "2025-08-15T10:17:20+00:00",
+  "totals": {
+    "devices": 5,
+    "in_topology": 4,
+    "not_in_topology": 1
+  },
+  "by_role": {
+    "core": {
+      "devices": 1,
+      "in_topology": 1,
+      "not_in_topology": 0
+    },
+    "distribution": {
+      "devices": 2,
+      "in_topology": 2,
+      "not_in_topology": 0
+    },
+    "access": {
+      "devices": 2,
+      "in_topology": 1,
+      "not_in_topology": 1
+    }
+  },
+  "severity": {
+    "totals": {
+      "medium": 1
+    },
+    "policy": "by_role"
+  },
+  "not_in_topology": [
+    "AccessSwitch2"
+  ],
+  "not_in_topology_detail": [
+    {
+      "hostname": "AccessSwitch2",
+      "role": "access",
+      "severity": "medium"
+    }
+  ]
+}
